@@ -5,14 +5,31 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCore.Answer.Web.Models;
+using AspNetCore.Answer.Web.Data;
 
 namespace AspNetCore.Answer.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ApplicationDbContext _context;
+
+        public HomeController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            List<Blog> blogs;
+            if (!_context.Blogs.Any())
+            {
+                _context.Blogs.Add(new Blog { Name = "Hello Blog" });
+                _context.SaveChanges();
+            }
+
+            blogs = _context.Blogs.ToList();
+
+            return View(blogs);
         }
 
         public IActionResult About()
