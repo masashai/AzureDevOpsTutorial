@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Web", "AspNetCore.Web\AspNetCore.Web.csproj", "{C7320852-DAA4-4EEF-B561-122B88D7D79D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Web", "AspNetCore.Web\AspNetCore.Web.csproj", "{C7320852-DAA4-4EEF-B561-122B88D7D79D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Answer.Web", "AspNetCore.Answer.Web\AspNetCore.Answer.Web.csproj", "{3950270A-3E91-44ED-B487-303269000B16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Answer.Web", "AspNetCore.Answer.Web\AspNetCore.Answer.Web.csproj", "{3950270A-3E91-44ED-B487-303269000B16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Answer.Web.Test", "AspNetCore.Answer.Web.Test\AspNetCore.Answer.Web.Test.csproj", "{63D3330B-AC1C-4A10-8503-4925AEA9D5CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3950270A-3E91-44ED-B487-303269000B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3950270A-3E91-44ED-B487-303269000B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3950270A-3E91-44ED-B487-303269000B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D3330B-AC1C-4A10-8503-4925AEA9D5CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D3330B-AC1C-4A10-8503-4925AEA9D5CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D3330B-AC1C-4A10-8503-4925AEA9D5CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D3330B-AC1C-4A10-8503-4925AEA9D5CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,35 +6,38 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCore.Answer.Web.Models;
 using AspNetCore.Answer.Web.Data;
+using AspNetCore.Answer.Web.Services;
 
 namespace AspNetCore.Answer.Web.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IHomeService _homeService;
 
-        public HomeController(ApplicationDbContext context)
+        public HomeController(ApplicationDbContext context
+            , IHomeService homeService)
         {
             _context = context;
+            _homeService = homeService;
         }
 
         public IActionResult Index()
         {
-            List<Blog> blogs;
             if (!_context.Blogs.Any())
             {
                 _context.Blogs.Add(new Blog { Name = "Hello Blog" });
                 _context.SaveChanges();
             }
 
-            blogs = _context.Blogs.ToList();
+            var blogs = _context.Blogs.ToList();
 
             return View(blogs);
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = _homeService.Greet(DateTime.Now.Hour);
 
             return View();
         }
