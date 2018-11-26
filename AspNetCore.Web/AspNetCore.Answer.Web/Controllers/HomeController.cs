@@ -44,9 +44,11 @@ namespace AspNetCore.Answer.Web.Controllers
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            throw new Exception();
 
-            return View();
+            //ViewData["Message"] = "Your contact page.";
+
+            //return View();
         }
 
         public IActionResult Privacy()
