@@ -19,16 +19,16 @@ namespace AspNetCore.Answer.Web.Services
         public string Greet(int hour)
         {
             var greeting = "";
-            
+
             if (hour < 5)
             {
                 greeting = "こんばんは";
             }
-            else　if(hour < 12)
+            else　if (hour < 12)
             {
                 greeting = "おはよう";
             }
-            else if (hour < 17)
+            else if (hour < 18)
             {
                 greeting = "こんにちは";
             }
