@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "hostingPlanName": {
-      "value": null
+      "value": "APMSample"
     },
     "administratorLogin": {
-      "value": null
+      "value": "ajsadmin"
     },
     "databaseName": {
-      "value": null
+      "value": "@js@dm1n"
     }
   }
 }
