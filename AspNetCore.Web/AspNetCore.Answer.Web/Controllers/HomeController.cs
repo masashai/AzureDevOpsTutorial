@@ -28,7 +28,7 @@ namespace AspNetCore.Answer.Web.Controllers
 
         public IActionResult Index()
         {
-            _logger.LogWarning("これはカスタムログです");
+            _logger.LogInformation("これはカスタムログです");
             if (!_context.Blogs.Any())
             {
                 _context.Blogs.Add(new Blog { Name = "Hello Blog" });
