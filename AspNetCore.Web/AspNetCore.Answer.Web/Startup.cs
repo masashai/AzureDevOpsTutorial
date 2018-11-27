@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace AspNetCore.Answer.Web
 {
@@ -44,8 +45,11 @@ namespace AspNetCore.Answer.Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            // Application Insightsにログを送信する設定
+            loggerFactory.AddApplicationInsights(app.ApplicationServices, LogLevel.Debug);
+            
             InitializeDatabase(app);
 
             if (env.IsDevelopment())

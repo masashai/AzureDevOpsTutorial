@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using AspNetCore.Answer.Web.Models;
 using AspNetCore.Answer.Web.Data;
 using AspNetCore.Answer.Web.Services;
+using Microsoft.Extensions.Logging;
 
 namespace AspNetCore.Answer.Web.Controllers
 {
@@ -14,16 +15,20 @@ namespace AspNetCore.Answer.Web.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IHomeService _homeService;
+        private readonly ILogger _logger;
 
         public HomeController(ApplicationDbContext context
-            , IHomeService homeService)
+            , IHomeService homeService
+            , ILogger<HomeController> logger)
         {
             _context = context;
             _homeService = homeService;
+            _logger = logger;
         }
 
         public IActionResult Index()
         {
+            _logger.LogWarning("これはカスタムログです");
             if (!_context.Blogs.Any())
             {
                 _context.Blogs.Add(new Blog { Name = "Hello Blog" });
