@@ -2,17 +2,23 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+    "webSiteName": {
+      "value": "ARMSampleWeb"
+    },
+    "sqlserverName": {
+      "value": "armsamplesqlserver"
+    },
     "hostingPlanName": {
-      "value": "APMSample"
+      "value": "ARMSample"
     },
     "administratorLogin": {
       "value": "ajsadmin"
     },
     "administratorLoginPassword": {
-      "value": "@js@dm1n"
+      "value": ""
     },
     "databaseName": {
-      "value": "APMSampleDB"
+      "value": "ARMSampleDB"
     }
   }
 }
