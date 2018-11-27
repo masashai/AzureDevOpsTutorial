@@ -8,8 +8,11 @@
     "administratorLogin": {
       "value": "ajsadmin"
     },
-    "databaseName": {
+    "administratorLoginPassword": {
       "value": "@js@dm1n"
+    },
+    "databaseName": {
+      "value": "APMSampleDB"
     }
   }
 }
