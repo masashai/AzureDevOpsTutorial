@@ -55,7 +55,7 @@ namespace AspNetCore.Answer.Web.Test
             var actual = service.Greet(2);
 
             //Assert
-            Assert.AreEqual("‚±‚ñ‚Î‚ñ‚Í", actual);
+            Assert.AreEqual("", actual);
         }
     }
 }
