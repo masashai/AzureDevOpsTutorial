@@ -1,4 +1,4 @@
-using AspNetCore.Answer.Web.Services;
+Ôªøusing AspNetCore.Answer.Web.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AspNetCore.Answer.Web.Test
@@ -16,7 +16,7 @@ namespace AspNetCore.Answer.Web.Test
             var actual = service.Greet(11);
 
             //Assert
-            Assert.AreEqual("Ç®ÇÕÇÊÇ§", actual);
+            Assert.AreEqual("„Åä„ÅØ„Çà„ÅÜ", actual);
         }
 
         [TestMethod]
@@ -29,7 +29,7 @@ namespace AspNetCore.Answer.Web.Test
             var actual = service.Greet(12);
 
             //Assert
-            Assert.AreEqual("Ç±ÇÒÇ…ÇøÇÕ", actual);
+            Assert.AreEqual("„Åì„Çì„Å´„Å°„ÅØ", actual);
         }
 
         [TestMethod]
@@ -42,7 +42,7 @@ namespace AspNetCore.Answer.Web.Test
             var actual = service.Greet(18);
 
             //Assert
-            Assert.AreEqual("Ç±ÇÒÇŒÇÒÇÕ", actual);
+            Assert.AreEqual("„Åì„Çì„Å∞„Çì„ÅØ", actual);
         }
 
         [TestMethod]
@@ -55,7 +55,7 @@ namespace AspNetCore.Answer.Web.Test
             var actual = service.Greet(2);
 
             //Assert
-            Assert.AreEqual("Ç±ÇÒÇŒÇÒÇÕ", actual);
+            Assert.AreEqual("„Åì„Çì„Å∞„Çì„ÅØ", actual);
         }
     }
 }
