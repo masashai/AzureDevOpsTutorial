@@ -4,10 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace AspNetCore.Answer.Web.Test
 {
     [TestClass]
-    public class ’P‘ÌƒeƒXƒg
+    public class UnitTest
     {
         [TestMethod]
-        public void ˆ¥ŽA_11Žž_‚¨‚Í‚æ‚¤()
+        public void Greet_11_GoodMorning()
         {
             //Arrange
             var service = new HomeService();
@@ -20,7 +20,7 @@ namespace AspNetCore.Answer.Web.Test
         }
 
         [TestMethod]
-        public void ˆ¥ŽA_12Žž_‚±‚ñ‚É‚¿‚Í()
+        public void Greet_12_Hello()
         {
             //Arrange
             var service = new HomeService();
@@ -33,7 +33,7 @@ namespace AspNetCore.Answer.Web.Test
         }
 
         [TestMethod]
-        public void ˆ¥ŽA_18Žž_‚±‚ñ‚Î‚ñ‚Í()
+        public void Greet_18_GoodEvening()
         {
             //Arrange
             var service = new HomeService();
@@ -46,7 +46,7 @@ namespace AspNetCore.Answer.Web.Test
         }
 
         [TestMethod]
-        public void ˆ¥ŽA_2Žž_‚±‚ñ‚Î‚ñ‚Í()
+        public void Greet_2_GoodEvening()
         {
             //Arrange
             var service = new HomeService();
