@@ -18,13 +18,13 @@ public class HomeService {
 		String greeting = "";
 		
 		if (hour < 5) {
-			greeting = "‚±‚ñ‚Î‚ñ‚Í";
+			greeting = "ã“ã‚“ã°ã‚“ã¯";
 		} else if (hour < 12) {
-			greeting = "‚¨‚Í‚æ‚¤";
+			greeting = "ãŠã¯ã‚ˆã†";
 		} else if (hour < 18) {
-			greeting = "‚±‚ñ‚É‚¿‚Í";
+			greeting = "ã“ã‚“ã«ã¡ã¯";
 		} else {
-			greeting = "‚±‚ñ‚Î‚ñ‚Í";
+			greeting = "ã“ã‚“ã°ã‚“ã¯";
 		}
 		return greeting;
 	}

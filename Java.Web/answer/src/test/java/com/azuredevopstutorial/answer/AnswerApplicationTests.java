@@ -20,38 +20,38 @@ public class AnswerApplicationTests {
 	
 	@Test
 	public void greet_11_goodmorning() {
-		// Arrange�EAct
+		// Arrange・Act
 		String actual = service.greet(11);
 		
 		// Assert
-		assertThat(actual, is("���͂悤"));
+		assertThat(actual, is("おはよう"));
 	}
 	
 	@Test
 	public void greet_12_hello() {
-		// Arrange�EAct
+		// Arrange・Act
 		String actual = service.greet(12);
 		
 		// Assert
-		assertThat(actual, is("����ɂ���"));
+		assertThat(actual, is("こんにちは"));
 	}
 	
 	@Test
 	public void greet_18_goodevening() {
-		// Arrange�EAct
+		// Arrange・Act
 		String actual = service.greet(18);
 		
 		// Assert
-		assertThat(actual, is("����΂��"));
+		assertThat(actual, is("こんばんは"));
 	}
 	
 	@Test
 	public void greet_2_goodevening() {
-		// Arrange�EAct
+		// Arrange・Act
 		String actual = service.greet(2);
 		
 		// Assert
-		assertThat(actual, is("����΂��"));
+		assertThat(actual, is("こんばんは"));
 	}
 
 }
