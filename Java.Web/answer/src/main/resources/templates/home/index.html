@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Index</title>
+</head>
+<body>
+	<div>
+		<table>
+			<tr th:each="blog : ${blogs}" th:object="${blog}">
+				<td th:text="*{name}">name</td>
+				<td th:text="*{author}">author</td>
+			</tr>
+		</table>	
+	</div>
+	
+	<a href="/home/contact" th:href="@{/home/contact}">Contact</a>
+</body>
+</html>

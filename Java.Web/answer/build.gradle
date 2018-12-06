@@ -1,0 +1,48 @@
+buildscript {
+	ext {
+		springBootVersion = '2.1.1.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.azuredevopstutorial'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+// Doma Setting
+processResources.destinationDir = compileJava.destinationDir
+compileJava.dependsOn processResources
+
+repositories {
+	mavenCentral()
+	// Doma Setting
+	maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }	
+}
+
+
+dependencies {
+	// Thymeleaf
+	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+	// Spring MVC
+	implementation('org.springframework.boot:spring-boot-starter-web')
+	// SQL Server
+	runtimeOnly('com.microsoft.sqlserver:mssql-jdbc')
+	// Doma
+	implementation('org.seasar.doma.boot:doma-spring-boot-starter:1.1.1')	
+	// Lombok
+	compileOnly('org.projectlombok:lombok')
+	// Flyway
+	implementation('org.flywaydb:flyway-core')
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
