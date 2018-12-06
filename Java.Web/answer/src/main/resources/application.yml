@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=AzureDevOpsTutorial
+    username: sa
+    password: sa
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  resources:
+    chain:
+      enabled: true
+      strategy:
+        content:
+          enabled: true
+          paths: /js/**,/css/**
+
+doma:
+  dialect: mssql
+  sql-file-repository: no-cache
