@@ -23,6 +23,11 @@ sourceCompatibility = 1.8
 processResources.destinationDir = compileJava.destinationDir
 compileJava.dependsOn processResources
 
+def aptGeneratePath = 'build/apt_generated'
+compileJava.options.compilerArgs = ['-s', aptGeneratePath]
+new File(aptGeneratePath).mkdirs()
+
+
 repositories {
 	mavenCentral()
 	// Doma Setting
