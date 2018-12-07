@@ -30,10 +30,10 @@ public class HomeService {
 	}
 	
 	public List<Blog> getBlog() {
-		return rep.selectAll();
+		return rep.findAll();
 	}
 	
 	public void addBlog(Blog blog) {
-		rep.insert(blog);
+		rep.save(blog);
 	}
 }
