@@ -19,35 +19,26 @@ group = 'com.azuredevopstutorial'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
-// Doma Setting
-processResources.destinationDir = compileJava.destinationDir
-compileJava.dependsOn processResources
-
-def aptGeneratePath = 'build/apt_generated'
-compileJava.options.compilerArgs = ['-s', aptGeneratePath]
-new File(aptGeneratePath).mkdirs()
-
-
 repositories {
 	mavenCentral()
-	// Doma Setting
-	maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }	
 }
 
 
 dependencies {
 	// Thymeleaf
 	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+
 	// Spring MVC
 	implementation('org.springframework.boot:spring-boot-starter-web')
-	// SQL Server
-	runtimeOnly('com.microsoft.sqlserver:mssql-jdbc')
-	// Doma
-	implementation('org.seasar.doma.boot:doma-spring-boot-starter:1.1.1')	
+	
+	// JPA
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    
+    // H2
+    implementation("com.h2database:h2")
+
 	// Lombok
 	compileOnly('org.projectlombok:lombok')
-	// Flyway
-	implementation('org.flywaydb:flyway-core')
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }

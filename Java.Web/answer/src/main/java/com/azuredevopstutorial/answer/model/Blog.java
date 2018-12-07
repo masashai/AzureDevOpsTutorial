@@ -1,18 +1,18 @@
 package com.azuredevopstutorial.answer.model;
 
-import org.seasar.doma.Entity;
-import org.seasar.doma.GeneratedValue;
-import org.seasar.doma.GenerationType;
-import org.seasar.doma.Id;
-import org.seasar.doma.Table;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import lombok.Data;
 
 @Entity
-@Table
+@Data
 public class Blog {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public int blogId;
+	@GeneratedValue
+	public Integer blogId;
 
 	public String name;
 

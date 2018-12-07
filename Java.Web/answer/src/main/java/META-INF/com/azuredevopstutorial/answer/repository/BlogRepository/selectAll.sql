@@ -1,1 +1,0 @@
-select blogId, name, author from Blog order by blogId;

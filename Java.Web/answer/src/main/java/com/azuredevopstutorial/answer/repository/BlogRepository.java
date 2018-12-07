@@ -1,20 +1,11 @@
 package com.azuredevopstutorial.answer.repository;
 
-import java.util.List;
-
-import org.seasar.doma.Dao;
-import org.seasar.doma.Insert;
-import org.seasar.doma.Select;
-import org.seasar.doma.boot.ConfigAutowireable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.azuredevopstutorial.answer.model.Blog;
 
-@ConfigAutowireable
-@Dao
-public interface BlogRepository {
-	@Select
-	List<Blog> selectAll();	
+@Repository
+public interface BlogRepository extends JpaRepository<Blog, Integer> {
 	
-	@Insert
-	int insert(Blog blog);
 }
